@@ -44,7 +44,6 @@ jobs:
           docker stop test-container || true
           docker rm test-container
 
-      # Simplificado, apenas para verificar se docker compose funciona
       - name: Test docker compose basic functionality
         run: |
           # Simplesmente tenta executar o comando, sem verificar o status
