@@ -30,13 +30,18 @@ public class SecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authorize ->
                         authorize
-                                .requestMatchers(HttpMethod.GET, "/api/reciclagem").hasRole("USER")
-                                .requestMatchers(HttpMethod.POST, "/api/reciclagem").hasRole("USER")
-                                .requestMatchers(HttpMethod.PUT, "/api/reciclagem").hasRole("USER")
-                                .requestMatchers(HttpMethod.GET, "/api/reciclagem/*").hasRole("USER")
-                                .requestMatchers(HttpMethod.DELETE, "/api/reciclagem/*").hasRole("USER")
+                                .requestMatchers(HttpMethod.GET, "/api/reciclagem").permitAll()
+                                .requestMatchers(HttpMethod.POST, "/api/reciclagem").permitAll()
+                                .requestMatchers(HttpMethod.PUT, "/api/reciclagem").permitAll()
+                                .requestMatchers(HttpMethod.GET, "/api/reciclagem/*").permitAll()
+                                .requestMatchers(HttpMethod.DELETE, "/api/reciclagem/*").permitAll()
                                 .requestMatchers(HttpMethod.POST, "/auth/register").permitAll()
                                 .requestMatchers(HttpMethod.POST, "/auth/login").permitAll()
+                                .requestMatchers(
+                                        "/v3/api-docs/**",
+                                        "/swagger-ui/**",
+                                        "/swagger-ui.html"
+                                ).permitAll()
                                 .anyRequest().authenticated())
                 .addFilterBefore(tokenVerify, UsernamePasswordAuthenticationFilter.class)
                 .build();
