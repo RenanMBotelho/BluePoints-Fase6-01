@@ -8,11 +8,10 @@ services:
     ports:
       - "8080:8080"
     environment:
-      # Estas credenciais seriam substituídas por um banco de dados de teste
-      SPRING_DATASOURCE_URL: jdbc:h2:mem:testdb
-      SPRING_DATASOURCE_USERNAME: sa
-      SPRING_DATASOURCE_PASSWORD:
-      SPRING_JPA_DATABASE-PLATFORM: org.hibernate.dialect.H2Dialect
+      # Configuração para Oracle - mantendo a mesma do ambiente original para testes
+      SPRING_DATASOURCE_URL: jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL
+      SPRING_DATASOURCE_USERNAME: RM553736
+      SPRING_DATASOURCE_PASSWORD: 180293
       SPRING_FLYWAY_BASELINEONMIGRATE: true
       SPRING_FLYWAY_LOCATIONS: classpath:db/migration
       SPRING_JPA_SHOW_SQL: true
