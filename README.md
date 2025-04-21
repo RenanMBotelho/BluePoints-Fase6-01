@@ -29,7 +29,7 @@ Este fonte realiza testes via api das funcionalidades de CRUD do aplicativo.
 
 ## Pré-requisitos
 
-- Intellij para clonar o código.
+- IDE para clonar o código.
 - Arquivos de teste de api para o aplicativo.
 - Programa Postman ou Insomnia para testes de api com os arquivos.
 - Liberação da porta 8080 para o programa rodar via Docker.
@@ -39,14 +39,14 @@ Este fonte realiza testes via api das funcionalidades de CRUD do aplicativo.
 
 Siga os passos abaixo para configurar o ambiente de desenvolvimento:
 
-1. Clone este repositório no ambiente de desenvolvimento (indicado o programa Intellij): https://github.com/RenanMBotelho/BluePoints-Fase3.git
-2. Caso não tenha, instale o programa Postman ou Insomnia.
-3. Pegue no diretório do programa o json de teste de api e importe no programa instalado.
+1. Clone este repositório no ambiente de desenvolvimento (indicado o programa Intellij ou Visual Studio Code): https://github.com/RenanMBotelho/BluePoints-Fase6-01.git
+2. Caso deseje, instale o programa Postman ou Insomnia.
 
 ## Uso
 
 1. Rode o programa e se certifique que não tenha apresentado erro no terminal.
-2. Abra o programa Postman ou similar com o json de api já importado.
+2. É possível usar o programa através do navegador, utilizando a extenção Swagger no link: http://localhost:8080/swagger-ui/index.html#/
+3. É possível também utilizar através do programa Postman ou similar com o json de api já importado, encontrando no diretório do projeto.
 
 ## Docker
 
